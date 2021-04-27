@@ -8,6 +8,7 @@ public class AdAa2FranciscoJesusMoyaOlivaresApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AdAa2FranciscoJesusMoyaOlivaresApplication.class, args);
+
 	}
 
 }
