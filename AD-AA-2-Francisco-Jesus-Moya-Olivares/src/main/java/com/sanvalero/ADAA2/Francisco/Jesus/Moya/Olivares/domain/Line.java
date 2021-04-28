@@ -12,15 +12,20 @@ public class Line {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
+
     @Column
     private String name;
+
     @Column
     private Float size;
+
     @Column
     private Boolean acctive;
+
     @Column
     private LocalDate creation;
+
     @Column
     private String color;
 

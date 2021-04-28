@@ -11,15 +11,20 @@ public class Passenger {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
+
     @Column
     private Boolean premium;
+
     @Column(name = "inscription_date")
     private LocalDate inscriptiondate;
+
     @Column
     private String name;
+
     @Column
-    private int edad;
+    private Integer edad;
+
     @Column(name = "distance_between_home_Stopbus")
     private Float distancebetweenhomestopbus;
 
