@@ -10,6 +10,7 @@ public interface PassengerService {
     ArrayList<Passenger> findAll();
     Optional<Passenger> findById(Integer id);
     Passenger save(Passenger passenger);
+    Passenger modifyPassenger(Passenger passenger);
     void deleteById(Integer id);
     void deleteAll();
     long count();

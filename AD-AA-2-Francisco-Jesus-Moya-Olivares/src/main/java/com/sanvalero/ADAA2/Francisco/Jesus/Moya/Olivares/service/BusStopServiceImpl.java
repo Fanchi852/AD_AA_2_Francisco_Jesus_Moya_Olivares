@@ -1,30 +1,43 @@
 package com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.service;
 
 import com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.domain.BusStop;
+import com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.repository.BusStopRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Set;
 
+@Service
 public class BusStopServiceImpl implements BusStopService{
+
+    @Autowired
+    private BusStopRepository busstoprepository;
+
     @Override
     public ArrayList<BusStop> findAll() {
-        return null;
+        return busstoprepository.findAll();
     }
 
     @Override
     public Optional<BusStop> findById(Integer id) {
-        return Optional.empty();
+        return busstoprepository.findById(id);
     }
 
     @Override
     public Set<BusStop> findByName(String name) {
-        return null;
+        return busstoprepository.findByName(name);
     }
 
     @Override
     public BusStop save(BusStop busstop) {
-        return null;
+        return busstoprepository.save(busstop);
+    }
+
+    @Override
+    public BusStop modifyBusStop(BusStop busstop) {
+        return busstoprepository.modifyBusStop(busstop);
     }
 
     @Override
@@ -39,6 +52,6 @@ public class BusStopServiceImpl implements BusStopService{
 
     @Override
     public long count() {
-        return 0;
+        return busstoprepository.count();
     }
 }

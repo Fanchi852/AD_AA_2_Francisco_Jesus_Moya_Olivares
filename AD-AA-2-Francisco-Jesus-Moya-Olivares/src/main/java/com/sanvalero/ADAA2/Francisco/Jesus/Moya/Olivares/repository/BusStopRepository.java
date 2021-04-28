@@ -1,6 +1,5 @@
 package com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.repository;
 
-import com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.domain.Bus;
 import com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.domain.BusStop;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -16,6 +15,7 @@ public interface BusStopRepository extends CrudRepository<BusStop, Integer> {
     Optional<BusStop> findById(Integer id);
     Set<BusStop> findByName(String name);
     BusStop save(BusStop busstop);
+    BusStop modifyBusStop(BusStop busstop);
     void deleteById(Integer id);
     void deleteAll();
     long count();
