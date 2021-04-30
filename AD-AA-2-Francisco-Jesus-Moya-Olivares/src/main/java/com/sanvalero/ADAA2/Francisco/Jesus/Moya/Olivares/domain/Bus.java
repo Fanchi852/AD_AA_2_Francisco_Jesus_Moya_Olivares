@@ -1,13 +1,20 @@
 package com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.datetime.DateFormatter;
+
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Data
@@ -30,7 +37,7 @@ public class Bus {
     private Boolean doublebus;
 
     @Schema(description = "fecha de adquisicion de autobus", example = "25/01/1999 17:25:00", required = true)
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    //@JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column(name = "buy_date")
     private LocalDate buydate;
 
@@ -44,6 +51,7 @@ public class Bus {
 
     @ManyToOne()
     @JoinColumn(name = "line_id")
+    @JsonBackReference
     private Line line;
 
     @OneToMany(mappedBy = "bus")

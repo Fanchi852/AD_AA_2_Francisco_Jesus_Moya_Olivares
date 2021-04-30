@@ -31,7 +31,7 @@ public class PassengerServiceImpl implements PassengerService{
 
     @Override
     public Passenger modifyPassenger(Passenger passenger) {
-        return passengerrepository.modifyPassenger(passenger);
+        return passengerrepository.findById(passenger.getId()).get();
     }
 
     @Override

@@ -32,7 +32,7 @@ public class PassengersBusesRelationServiceImpl implements PassengersBusesRelati
 
     @Override
     public PassengersBusesRelation modifyPassengersBusesRelation(PassengersBusesRelation passengersbusesrelation) {
-        return passengersbusesrelationrepository.modifyPassengersBusesRelation(passengersbusesrelation);
+        return passengersbusesrelationrepository.findById(passengersbusesrelation.getId()).get();
     }
 
     @Override

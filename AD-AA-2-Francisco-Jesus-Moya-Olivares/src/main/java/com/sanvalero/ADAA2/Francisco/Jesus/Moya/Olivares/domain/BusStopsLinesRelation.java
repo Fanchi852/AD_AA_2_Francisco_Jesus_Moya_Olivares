@@ -1,5 +1,6 @@
 package com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,10 +21,12 @@ public class BusStopsLinesRelation {
 
     @ManyToOne
     @JoinColumn(name = "busstop_id")
+    @JsonBackReference
     private BusStop busstop;
 
     @ManyToOne
     @JoinColumn(name = "line_id")
+    @JsonBackReference
     private Line line;
 
 }

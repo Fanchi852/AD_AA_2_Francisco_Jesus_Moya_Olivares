@@ -15,7 +15,6 @@ public interface LineRepository extends CrudRepository<Line,Integer> {
     Optional<Line> findById(Integer id);
     Line findByName(String name);
     Line save(Line line);
-    Line modifyLine(Line line);
     void deleteById(Integer id);
     void deleteAll();
     long count();
