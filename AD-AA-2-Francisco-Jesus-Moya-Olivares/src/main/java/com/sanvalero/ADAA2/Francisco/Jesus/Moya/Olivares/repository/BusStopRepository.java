@@ -15,7 +15,6 @@ public interface BusStopRepository extends CrudRepository<BusStop, Integer> {
     Optional<BusStop> findById(Integer id);
     Set<BusStop> findByName(String name);
     BusStop save(BusStop busstop);
-    BusStop modifyBusStop(BusStop busstop);
     void deleteById(Integer id);
     void deleteAll();
     long count();

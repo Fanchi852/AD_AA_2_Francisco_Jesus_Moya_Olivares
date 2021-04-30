@@ -14,7 +14,6 @@ public interface PassengersBusesRelationRepository extends CrudRepository<Passen
     ArrayList<PassengersBusesRelation> findAll();
     Optional<PassengersBusesRelation> findById(Integer id);
     PassengersBusesRelation save(PassengersBusesRelation passengersbusesrelation);
-    PassengersBusesRelation modifyPassengersBusesRelation(PassengersBusesRelation passengersbusesrelation);
     void deleteById(Integer id);
     void deleteAll();
     long count();

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class Line {
     @Schema(description = "", example = "25/01/1999 17:25:00", required = true)
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     @Column
-    private LocalDate creation;
+    private Date creation;
 
     @Schema(description = "color representatibo de la linea en los mapas", example = "rojo", required = true)
     @Column

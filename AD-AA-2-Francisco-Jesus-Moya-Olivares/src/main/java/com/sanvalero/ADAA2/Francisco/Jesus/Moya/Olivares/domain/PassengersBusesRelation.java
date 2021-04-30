@@ -1,5 +1,6 @@
 package com.sanvalero.ADAA2.Francisco.Jesus.Moya.Olivares.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -22,10 +23,12 @@ public class PassengersBusesRelation {
 
     @ManyToOne
     @JoinColumn(name = "passenger_id")
+    @JsonBackReference
     private Passenger passenger;
 
     @ManyToOne
     @JoinColumn(name = "bus_id")
+    @JsonBackReference
     private Bus bus;
 
     @Schema(description = "momento en el que el pasajero sube al autobus", example = "25/01/1999 17:25:00", required = true)

@@ -31,7 +31,7 @@ public class BusStopsLinesRelationServiceImpl implements BusStopsLinesRelationSe
 
     @Override
     public BusStopsLinesRelation modifyBusStopsLinesRelation(BusStopsLinesRelation busstopslinesrelation) {
-        return busstopslinesrelationrepository.modifyBusStopsLinesRelation(busstopslinesrelation);
+        return busstopslinesrelationrepository.findById(busstopslinesrelation.getId()).get();
     }
 
     @Override

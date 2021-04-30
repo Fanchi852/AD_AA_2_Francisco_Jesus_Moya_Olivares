@@ -37,7 +37,7 @@ public class BusStopServiceImpl implements BusStopService{
 
     @Override
     public BusStop modifyBusStop(BusStop busstop) {
-        return busstoprepository.modifyBusStop(busstop);
+        return busstoprepository.findById(busstop.getId()).get();
     }
 
     @Override

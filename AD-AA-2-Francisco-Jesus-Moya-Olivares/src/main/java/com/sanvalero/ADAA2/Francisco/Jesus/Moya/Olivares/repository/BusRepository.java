@@ -16,7 +16,6 @@ public interface BusRepository extends CrudRepository<Bus, Integer>  {
     ArrayList<Bus> findByCode(String code);
     ArrayList<Bus> findByLine (Integer line);
     Bus save(Bus bus);
-    Bus modifyBus(Bus bus);
     void deleteById(Integer id);
     void deleteAll();
     long count();

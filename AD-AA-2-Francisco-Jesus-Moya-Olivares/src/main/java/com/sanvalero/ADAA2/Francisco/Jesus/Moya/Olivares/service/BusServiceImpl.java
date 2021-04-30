@@ -46,9 +46,7 @@ public class BusServiceImpl implements BusService{
     }
 
     @Override
-    public Bus modifyBus(Bus bus) {
-        return busrepository.modifyBus(bus);
-    }
+    public Bus modifyBus(Bus bus) {return busrepository.findById(bus.getId()).get();}
 
     @Override
     public void deleteById(Integer id) {
